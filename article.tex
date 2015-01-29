@@ -1,0 +1,86 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{cite}
+\title{Arithmatic and Geometric Progression}
+\author{Aayush Ojha}
+\date{\today}
+\begin{document}
+\maketitle
+\section{ARITHMATIC PROGRESSION}
+In mathematics, an arithmetic progression (AP) or arithmetic sequence is a sequence of numbers such that the difference between the consecutive terms is constant. For instance, the sequence $5$, $7$, $9$, $11$, $13$, $15$ $\ldots$ is an arithmetic progression with common difference of $2$.\\
+If the initial term of an arithmetic progression is $a_{1}$ and the common difference of successive members is $d$, then the $nth$ term of the sequence ($a_{n}$) is given by:\\
+\\
+$$ a_{n} = a_{1} + (n-1)d,$$\\
+\\
+and in general\\
+\\
+$$ a_{n} = a_{m} + (n - m)d.$$
+
+\subsection{SUM OF AP}
+The sum of the members of a finite arithmetic progression is called an arithmetic series. For example, consider the sum:
+
+   $$2 + 5 + 8 + 11 + 14$$
+
+This sum can be found quickly by taking the number n of terms being added (here 5), multiplying by the sum of the first and last number in the progression (here 2 + 14 = 16), and dividing by 2:
+
+$$\frac{n(a_{1} + a_{n})}{2}$$
+
+\subsection{DERIVATION}
+To derive the above formula, begin by expressing the arithmetic series in two different ways \cite{Arith}:
+
+$$ S_{n}=a_{1}+(a_{1}+d)+(a_{1}+2d)+\ldots+(a_{1}+(n-2)d)+(a_{1}+(n-1)d)$$
+
+   $$ S_{n}=(a_{n}-(n-1)d)+(a_{n}-(n-2)d)+\ldots+(a_{n}-2d)+(a_{n}-d)+a_{n}.$$
+
+Adding both sides of the two equations, all terms involving d cancel:
+
+    $$2S_{n}=n(a_{1} + a_{n}).$$
+
+Dividing both sides by 2 produces a common form of the equation:
+
+    $$S_{n}=\frac{n}{2}( a_{1} + a_{n}).$$
+
+An alternate form results from re-inserting the substitution $a_{n} = a_{1} + (n-1)d$:
+
+    $$S_{n}=\frac{n}{2}[ 2a_{1} + (n-1)d].$$
+
+Furthermore the mean value of the series can be calculated via: $S_{n} / n$:
+
+    $$\overline{n} =\frac{a_{1} + a_{n}}{2}.$$ 
+\section{GEOMETRIC PROGRESSION}
+In mathematics, a geometric progression, also known as a geometric sequence, is a sequence of numbers where each term after the first is found by multiplying the previous one by a fixed, non-zero number called the common ratio. For example, the sequence $2$, $6$, $18$, $54$, $\ldots$ is a geometric progression with common ratio $3$. Similarly $10$, $5$, $2.5$, $1.25$, $\ldots$ is a geometric sequence with common ratio $\frac{1}{2}$.
+
+Examples of a geometric sequence are powers $r^{k}$ of a fixed number $r$, such as $2^{k}$ and $3^{k}$. The general form of a geometric sequence is\\
+\\
+$$a,ar,ar^{2},ar^{3},ar^{4}, \ldots$$
+\\
+where $r \neq 0$ is the common ratio and $a$ is a scale factor, equal to the sequence's start value.
+\subsection{SUM OF GP}
+A geometric series is the sum of the numbers in a geometric progression. For example:
+
+   $$2 + 10 + 50 + 250 = 2 + 2 \times 5 + 2 \times 5^{2} + 2 \times 5^{3} ,$$
+
+Letting a be the first term (here $2$), m be the number of terms (here $4$), and $r$ be the constant that each term is multiplied by to get the next term (here $5$), the sum is given by:
+
+$$\frac{a(1-r^{m})}{1-r}$$
+
+In the example above, this gives:
+
+   $$2 + 10 + 50 + 250 = \frac{2(1-5^4)}{1-5} = \frac{-1248}{-4} = 312.$$
+
+\subsection{DERIVATION OF SUM OF GP}
+To derive this formula, first write a general geometric series as \cite{geo}:
+
+$$\sum_{k=1}^{n} ar^{k-1} = a+ar +ar^{2}+ar^{3}+\ldots+ar^{n-1}.$$
+
+We can find a simpler formula for this sum by multiplying both sides of the above equation by $1-r$, and we'll see that
+\begin{equation*}
+\begin{aligned} (1-r) \sum_{k=1}^{n} ar^{k-1} &{} = (1-r)(a + ar +ar^{2}+ar^{3}+\ldots+ar^{n-1}) \\ &{} = a + ar +ar^{2}+ar^{3}+\ldots+ar^{n-1} \\ &{}      - ar -ar^{2}-ar^{3}-\ldots-ar^{n-1} - ar^{n} \\ &{}= a - ar^{n} \end{aligned}
+\end{equation*}
+since all the other terms cancel. If $r \neq 1$, we can rearrange the above to get the convenient formula for a geometric series that computes the sum of n terms:
+
+   $$ \sum_{k=1}^{n} ar^{k-1} = \frac{a(1-r^n)}{1-r}.$$ 
+ \bibliographystyle{plain}
+ \bibliography{references}
+\end{document}
