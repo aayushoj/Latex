@@ -16,6 +16,6 @@ pdf:
 
 
 clean: 
-	rm -rf *.aux *.blg *.bbl *.log
+	rm -rf *.aux *.blg *.bbl *.log a-eps-converted-to.pdf
 
 
